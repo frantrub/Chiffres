@@ -63,7 +63,7 @@ def calculs_possibles(cartes_restantes):
                         calculs_possibles(nouvelles_cartes+[c])
                         if essai : 
                             return True 
-                        
+    return False
           
             
                 
