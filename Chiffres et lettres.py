@@ -16,29 +16,57 @@ nombre_cherché=random.randint(100,1000)
 
 def calculs_possibles(cartes_restantes):
     N=len(cartes_restantes)
-    for i in range(N-1):
-        for j in range(i+1,N):
-            x=cartes_restantes[i]
-            y=cartes_restantes[j]
-            a=x+y
-            b=x*y
-            c=np.abs(x-y)
-            d=max(x,y)//min(x,x)
-            if a==nombre_cherché or b==nombre_cherché or c==nombre_cherché :
-                print('solution trouvée')
-            else:
-                nouvelles_cartes=cartes_restantes[:i]+cartes_restantes[i+1:j]+cartes_restantes[j+1:]
-                assert len(nouvelles_cartes) == N-2
-                calculs_possibles(nouvelles_cartes+[a])
-                calculs_possibles(nouvelles_cartes+[b])
-                calculs_possibles(nouvelles_cartes+[c])
-                if divmod(max(x,y),min(x,y))[1]==0:
-                    if d==nombre_cherché:
-                        print('solution trouvée')
-                    else : 
-                        calculs_possibles(nouvelles_cartes+[d])
+    if N==1 :
+        return False
+    else : 
+        for i in range(N-1):
+            for j in range(i+1,N):
+                x=cartes_restantes[i]
+                y=cartes_restantes[j]
+                a=x+y
+                b=x*y
+                c=np.abs(x-y)
+                if min(x,y)!=0:
+                    d=max(x,y)//min(x,y)
+                    if (a==nombre_cherché or b==nombre_cherché 
+                    or c==nombre_cherché or d==nombre_cherché) :
+                        return True
+                    else:
+                        nouvelles_cartes=(cartes_restantes[:i]+cartes_restantes[i+1:j]
+                        +cartes_restantes[j+1:])
+                        essai=calculs_possibles(nouvelles_cartes+[a])
+                        if essai : 
+                            return True 
+                        essai=calculs_possibles(nouvelles_cartes+[b])
+                        if essai : 
+                            return True
+                        calculs_possibles(nouvelles_cartes+[c])
+                        if essai : 
+                            return True
+                        if divmod(max(x,y),min(x,y))[1]==0:
+                                calculs_possibles(nouvelles_cartes+[d])
+                                if essai : 
+                                    return True
+                else:
+                    if (a==nombre_cherché or b==nombre_cherché 
+                    or c==nombre_cherché):
+                        return True
+                    else:
+                        nouvelles_cartes=(cartes_restantes[:i]+cartes_restantes[i+1:j]
+                        +cartes_restantes[j+1:])
+                        essai = calculs_possibles(nouvelles_cartes+[a])
+                        if essai : 
+                            return True
+                        calculs_possibles(nouvelles_cartes+[b])
+                        if essai : 
+                            return True
+                        calculs_possibles(nouvelles_cartes+[c])
+                        if essai : 
+                            return True 
+                        
+          
             
-            
+                
                 
                 
  #Utiliser fonction récursive 
