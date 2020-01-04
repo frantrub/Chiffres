@@ -9,63 +9,52 @@ Created on Sun Dec 15 18:15:37 2019
 import numpy as np 
 import numpy.random as random 
 
-deck_de_cartes=np.array([1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,
-                         10,10,25,25,50,50,75,75,100,100])
-cartes_tirées=random.choice(deck_de_cartes,6).tolist()
-nombre_cherché=random.randint(100,1000)
+deck_de_cartes = np.array([1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,
+                           10,10,25,25,50,50,75,75,100,100])
+cartes_tirées = random.choice(deck_de_cartes, 4).tolist()
+nombre_cherché = random.randint(100, 1000)
 
-def calculs_possibles(cartes_restantes):
-    N=len(cartes_restantes)
-    if N==1 :
-        return False
-    else : 
-        for i in range(N-1):
-            for j in range(i+1,N):
-                x=cartes_restantes[i]
-                y=cartes_restantes[j]
-                a=x+y
-                b=x*y
-                c=np.abs(x-y)
-                if min(x,y)!=0:
-                    d=max(x,y)//min(x,y)
-                    if (a==nombre_cherché or b==nombre_cherché 
-                    or c==nombre_cherché or d==nombre_cherché) :
-                        return True
-                    else:
-                        nouvelles_cartes=(cartes_restantes[:i]+cartes_restantes[i+1:j]
-                        +cartes_restantes[j+1:])
-                        essai=calculs_possibles(nouvelles_cartes+[a])
-                        if essai : 
-                            return True 
-                        essai=calculs_possibles(nouvelles_cartes+[b])
-                        if essai : 
-                            return True
-                        calculs_possibles(nouvelles_cartes+[c])
-                        if essai : 
-                            return True
-                        if divmod(max(x,y),min(x,y))[1]==0:
-                                calculs_possibles(nouvelles_cartes+[d])
-                                if essai : 
-                                    return True
-                else:
-                    if (a==nombre_cherché or b==nombre_cherché 
-                    or c==nombre_cherché):
-                        return True
-                    else:
-                        nouvelles_cartes=(cartes_restantes[:i]+cartes_restantes[i+1:j]
-                        +cartes_restantes[j+1:])
-                        essai = calculs_possibles(nouvelles_cartes+[a])
-                        if essai : 
-                            return True
-                        calculs_possibles(nouvelles_cartes+[b])
-                        if essai : 
-                            return True
-                        calculs_possibles(nouvelles_cartes+[c])
-                        if essai : 
-                            return True 
-    return False
-          
+def calculs_possibles(cartes_restantes, nombre_cherché):
+    if nombre_cherché in cartes_restantes:
+        return "Le compte est bon !"
+    for i, x in enumerate(cartes_restantes):
+        for j, y in enumerate(cartes_restantes[i+1:], i+1):
+            nouvelles_cartes = (cartes_restantes[:i] +
+                  cartes_restantes[i+1:j] + cartes_restantes[j+1:])
             
+            x, y = max(x,y), min(x,y)
+            
+            #Cas de l'addition :
+            essai = calculs_possibles(nouvelles_cartes + [x + y],
+                                 nombre_cherché)
+            if essai != None:
+                return str(x) + " + " + str(y) + " = " + str(x + y) + "\n" + essai
+            #Cas de la multiplication :
+            essai = calculs_possibles(nouvelles_cartes + [x * y],
+                                 nombre_cherché)
+            if essai != None:
+                return str(x) + " × " + str(y) + " = " + str(x * y) + "\n" + essai
+            #Cas de la soustraction :
+            essai = calculs_possibles(nouvelles_cartes + [x - y],
+                                 nombre_cherché)
+            if essai != None:
+                return str(x) + " - " + str(y) + " = " + str(x - y) + "\n"  + essai
+            #Cas de la division :
+            if y != 0 and x % y == 0:
+                essai = calculs_possibles(
+                            nouvelles_cartes + [x // y],
+                            nombre_cherché)
+                if essai != None: 
+                    return str(x) + " ÷ " + str(y) + " = " + str(x // y) + "\n" + essai
+    return None
+          
+print("Nombre à trouver : " + str(nombre_cherché))
+print("Cartes tirées : " + str(cartes_tirées) + "\n")
+Résultat = calculs_possibles(cartes_tirées, nombre_cherché)
+if Résultat == None: 
+    print("Il n'existe pas de solution :'(")
+else:
+    print(Résultat)
                 
                 
                 
