@@ -3,6 +3,12 @@
 Created on Sat Jan  4 19:01:41 2020
 
 @author: ftrub
+
+Algorithme de résolution de la partie Chiffres des Chiffres et de Lettres.
+Renvoie la première solution trouvée, avec les étapes de calculs. 
+S'il n'y a pas de solution exacte, ne donne pas de solution approchante. 
+Algorithme très rapide. 
+
 """
 
 import numpy as np
