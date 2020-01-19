@@ -3,6 +3,14 @@
 Created on Sat Jan  4 19:01:41 2020
 
 @author: ftrub
+
+Algorithme de résolution de la partie Chiffres des Chiffres et de Lettres.
+S'il existe au moins une solution, renvoie la solution qui réclame le moins 
+grand nombre d'étapes de calcul. 
+S'il n'y a pas de solution exacte, renvoie la meilleure solution approchante. 
+Dans les deux cas, donne le détail des étapes de calcul. 
+Algorithme toujours assez lent, car toutes les branches sont explorées. 
+
 """
 
 import numpy as np
