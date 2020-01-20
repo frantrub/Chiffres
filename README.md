@@ -22,8 +22,8 @@ Il eût été impossible de garder en mémoire tout les calculs effectués jusqu
 
 # 2. La musique du jeu 
 
-J'ai également réalisé un programme d'orchestre virtuel (Musique_chiffres.py), afin de simuler la musique du jeu télévisé des Chiffres et des Lettres.
-J'ai créé les différents instruments et une partition afin d'en extraire en fichier wav. 
+J'ai également réalisé un programme d'orchestre virtuel (Musique_chiffres.py), afin de générer la musique du jeu télévisé des Chiffres et des Lettres.
+J'ai créé les différents instruments et une partition afin d'en extraire un fichier wav. 
 
 Le programme ne lance pas le fichier wav, il faut le lancer à la main, avec VLC par exemple. 
 
