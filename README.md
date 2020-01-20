@@ -1,7 +1,7 @@
 # Countdowngame
 
-L'objectif du projet est d'écrire un algorithme en python capable de gagner à la partie Chiffres des Chiffres et des Lettres. 
-J'ai finalement réalisé trois programmes, deux programmes de résolution du jeu et un programme qui génère la musique du jeu télévisé. 
+L'objectif du projet est d'écrire un algorithme en python capable de gagner au jeu des Chiffres des Chiffres et des Lettres. 
+J'ai finalement réalisé trois programmes, deux programmes de résolution du jeu et un programme qui génère la musique du jeu. 
 
 # 1. La résolution du jeu 
 
