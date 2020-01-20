@@ -29,4 +29,6 @@ Le programme ne lance pas le fichier wav, il faut le lancer à la main, avec VLC
 
 # 3. Idées d'amélioration
 
-Si j'avais eu le temps, j'aurais réuni les deux programmes (de résolution et de musique) et rajouté un affichage graphique (une image du jeu par exemple), pour qu'en lançant le programme, la musique se lance automatiquement pendant que s'affiche de manière esthétique la résolution d'un problème des Chiffres et des lettres. 
+J'avais une expérience quasi nulle de la programmation informatique avant la réalisation de ce projet. Cela m'a pris beaucoup de temps 
+de comprendre l'utilisation des différents outils, notamment l'utilisation de git. 
+J'aurais aimé réunir les deux programmes (de résolution et de musique) et rajouter un affichage graphique (une image du jeu par exemple), pour qu'en lançant le programme, la musique se lance automatiquement pendant que s'affiche de manière esthétique la résolution d'un problème des Chiffres et des lettres. Mais le temps m'a manqué.
