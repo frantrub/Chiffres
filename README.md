@@ -12,13 +12,13 @@ Le second programme (Chiffres 2.py) renvoie la solution dont le nombre d'étapes
 renvoie le calcul qui donne le résultat le plus proche possible du nombre à trouver
 (comme il est demandé dans le jeu original). 
 
-Solution de programmation choisie: 
+Choix de programmation :
 
-Je me suis proposé de résoudre chaque fois un problème aléatoire (nombre cherché et nombres à utilisés tirés au sort), mais l'on peut
+Je me suis proposé de résoudre chaque fois un problème aléatoire (nombre cherché et nombres à utiliser tirés au sort), mais l'on peut
 facilement modifier ces programmes pour résoudre un problème particulier auquel on chercherait une solution. 
 Les deux programmes utilisent une fonction récursive de back-tracking. 
 Cette solution s'est imposée par son élégance et sa légéreté en termes de mémoire. 
-Il eût été impossible de garder en mémoire tout les calculs effectués jusqu'à ce que le solution soit trouvée (ordre de grandeur de plusieurs dizaines de millions). 
+Il eût été impossible de garder en mémoire tout les calculs effectués jusqu'à ce que le solution soit trouvée (ordre de grandeur de plusieurs dizaines de millions de calculs). 
 
 # 2. La musique du jeu 
 
