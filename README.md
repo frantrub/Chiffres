@@ -7,14 +7,14 @@ J'ai finalement réalisé trois programmes, deux programmes de résolution du je
 
 J'ai réalisé deux algorithmes de résolution du jeu, l'un plus rapide, l'autre plus complet. 
 Les deux programmes utilisent une fonction récursive de back-tracking. 
-Le premier programme s'arrête dès qu'une solution est trouvée et ne renvoie rien s'il n'existe pas de solution. 
-Le second programme renvoie la solution dont le nombre d'étapes est minimal, et s'il n'existe pas de solution exacte, 
+Le premier programme (Chiffres1.py) s'arrête dès qu'une solution est trouvée et ne renvoie rien s'il n'existe pas de solution. 
+Le second programme (Chiffres2.py) renvoie la solution dont le nombre d'étapes est minimal, et s'il n'existe pas de solution exacte, 
 renvoie le calcul qui donne le résultat le plus proche possible du nombre à trouver
 (comme il est demandé dans le jeu original). 
 
 # 2. La musique du jeu 
 
-J'ai également réalisé un programme d'orchestre virtuel, afin de simuler la musique du jeu télévisé des Chiffres et des Lettres.
+J'ai également réalisé un programme (Musique_chiffres.py) d'orchestre virtuel, afin de simuler la musique du jeu télévisé des Chiffres et des Lettres.
 J'ai crée les différents instruments et une partition afin d'en extraire en fichier wav. 
 
 # 3. Idées d'amélioration
