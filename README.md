@@ -27,7 +27,7 @@ J'ai crée les différents instruments et une partition afin d'en extraire en fi
 
 Le programme ne lance pas le fichier wav, il faut le lancer à la main, avec VLC par exemple. 
 
-# 3. Idées d'amélioration
+# 3. Idées d'améliorations
 
 J'avais une expérience quasi nulle de la programmation informatique avant la réalisation de ce projet. Cela m'a pris beaucoup de temps 
 de comprendre l'utilisation des différents outils, notamment l'utilisation de git. 
