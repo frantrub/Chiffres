@@ -22,13 +22,13 @@ Il eût été impossible de garder en mémoire tout les calculs effectués jusqu
 
 # 2. La musique du jeu 
 
-J'ai également réalisé un programme d'orchestre virtue l(Musique_chiffres.py), afin de simuler la musique du jeu télévisé des Chiffres et des Lettres.
-J'ai crée les différents instruments et une partition afin d'en extraire en fichier wav. 
+J'ai également réalisé un programme d'orchestre virtuel (Musique_chiffres.py), afin de simuler la musique du jeu télévisé des Chiffres et des Lettres.
+J'ai créé les différents instruments et une partition afin d'en extraire en fichier wav. 
 
 Le programme ne lance pas le fichier wav, il faut le lancer à la main, avec VLC par exemple. 
 
 # 3. Idées d'améliorations
 
-J'avais une expérience quasi nulle de la programmation informatique avant la réalisation de ce projet. Cela m'a pris beaucoup de temps 
+J'avais une expérience presque nulle de la programmation informatique avant la réalisation de ce projet. Cela m'a pris beaucoup de temps 
 de comprendre l'utilisation des différents outils, notamment l'utilisation de git. 
-J'aurais aimé réunir les deux programmes (de résolution et de musique) et rajouter un affichage graphique (une image du jeu par exemple), pour qu'en lançant le programme, la musique se lance automatiquement pendant que s'affiche de manière esthétique la résolution d'un problème des Chiffres et des lettres. Mais le temps m'a manqué.
+J'aurais aimé réunir les deux programmes (de résolution et de musique) et rajouter un affichage graphique (une image du jeu par exemple), pour qu'en lançant le programme, la musique se lance automatiquement pendant que se serait affichée de manière esthétique la résolution d'un problème des Chiffres et des lettres. Mais le temps m'a manqué.
