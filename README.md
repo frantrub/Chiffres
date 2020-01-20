@@ -16,4 +16,7 @@ renvoie le calcul qui donner le résultat le plus proche possible du nombre à t
 
 J'ai également réalisé un programme d'orchestre virtuel, afin de simuler la musique du jeu télévisé des Chiffres et des Lettres.
 J'ai crée différents instruments et une partition afin d'en extraire en fichier wav. 
-L'objectif était de faire avec le minimum d'éléments précodés et aucun sons réels. 
+
+3. # Idées d'amélioration
+
+Si j'avais eu le temps, j'aurais réuni les deux programmes de résolution et de musique et rajouté un affichage graphique (une image du jeu), pour qu'en lançant le programme, on ait à la fois la musique et la résolution d'un problème (affichée sur l'image).
