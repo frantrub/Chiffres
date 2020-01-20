@@ -57,3 +57,4 @@ if __name__ == "__main__":
         print("Il n'existe pas de solution :'(")
     else:
         print(résultat)
+ 
